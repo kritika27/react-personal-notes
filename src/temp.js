@@ -21,6 +21,7 @@ export const App=()=> {
   const [list, setList] = useState([]);
   const [edit,setEdit]=useState(false);
   const [editId,setEditId] =useState(null);
+  const [income,setIncome]=useState(5000);
   // const [sortOrder, setSortOrder] = useState("asc");
   // const timeElapsed = Date.now();
   // const today = new Date(timeElapsed);
@@ -98,6 +99,11 @@ export const App=()=> {
   return (
     <>
         <h1>Expense Tracker</h1>
+        <label>Income</label>
+        <input type="number" value={income}
+         onChange={(e)=>setIncome(e.target.value)} />
+         <label>Remaining balance</label>
+         <h2>$500</h2>
         <Form item={item} setItem={setItem} amount={amount} setAmount={setAmount} 
         handleSubmit={handleSubmit} edit={edit}/>
         <Expense list={list} edit={edit} setEdit={setEdit}

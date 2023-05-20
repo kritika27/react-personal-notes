@@ -8,7 +8,7 @@ import { Navbar } from "./components/Navbar";
 export const App=()=>{
 
   return(
-    <Router>
+    <>
       <Navbar/>
       <Routes>
 <Route path="/" element={<Home/>} />
@@ -16,6 +16,6 @@ export const App=()=>{
 <Route path="/cart" element={<Cart/>}/>
 <Route path="/shoes/:id" element={<SingleShoe/>}/>
       </Routes>
-    </Router>
+      </>
   )
 }
