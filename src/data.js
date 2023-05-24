@@ -11,6 +11,8 @@ const data = [
       shipping: true,
       amount: 1,
       stock: 4,
+      color:["green","red"],
+      size:["XS","S","M","L","XL"]
     },
     {
       id: "recEHmzvupvT8ZONH",
@@ -24,6 +26,8 @@ const data = [
       shipping: true,
       amount: 1,
       stock: 6,
+      color:["green","red"],
+      size:["XS","S","M","L","XL"]
     },
     {
       id: "rec5NBwZ5zCD9nfF0",
@@ -36,6 +40,8 @@ const data = [
       category: "Casual",
       amount: 1,
       stock: 4,
+      color:["green","red"],
+      size:["XS","S","M","L","XL"]
     },
     {
       id: "recd1jIVIEChmiwhe",
@@ -49,6 +55,8 @@ const data = [
       shipping: true,
       amount: 1,
       stock: 4,
+      color:["green","red"],
+      size:["XS","S","M","L","XL"]
     },
     {
       id: "recoM2MyHJGHLVi5l",
@@ -62,6 +70,8 @@ const data = [
       shipping: true,
       amount: 1,
       stock: 4,
+      color:["green","red"],
+      size:["XS","S","M","L","XL"]
     },
     {
       id: "recotY5Nh00DQFdkm",
@@ -75,6 +85,8 @@ const data = [
       shipping: true,
       amount: 1,
       stock: 4,
+      color:["green","red"],
+      size:["XS","S","M","L","XL"]
     },
     {
       id: "rec1Ntk7siEEW9ha1",
@@ -88,6 +100,8 @@ const data = [
       shipping: true,
       amount: 1,
       stock: 2,
+      color:["green","red"],
+      size:["XS","S","M","L","XL"]
     },
     {
       id: "recNZ0koOqEmilmoz",
@@ -101,6 +115,8 @@ const data = [
       shipping: true,
       amount: 1,
       stock: 3,
+      color:["green","red"],
+      size:["XS","S","M","L","XL"]
     },
     {
       id: "recrfxv3EwpvJwvjq",
@@ -114,6 +130,8 @@ const data = [
       shipping: true,
       amount: 1,
       stock: 4,
+      color:["green","red"],
+      size:["XS","S","M","L","XL"]
     },
     {
       id: "recoW8ecgjtKx2Sj2",
@@ -126,6 +144,8 @@ const data = [
       category: "Casual",
       amount: 1,
       stock: 5,
+      color:["green","red"],
+      size:["XS","S","M","L","XL"]
     },
   ];
   export default data;
