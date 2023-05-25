@@ -13,8 +13,17 @@ const reducer=(state,action)=>{
         return {...state,cart:[]}
     }
     else if(action.type==="ADD")
+
+    // const products={
+    //     id:1,
+    //     name:"Red T-shirt",
+    //     price:20,
+    //     amount:1,
+    //     img:"url"
+    // }
     { const {id,amount,products,color,size } =action.payload;
-       const newItem=state.cart.find(el=>el.id===action.payload);
+       const newItem=state.cart.find(el=>el.id===id+color+size);
+    //    console.log(newItem);
        if(!newItem)
        {
            const item={
@@ -27,6 +36,24 @@ const reducer=(state,action)=>{
                size   
            }
            return {...state,cart:[...state.cart,item]}
+       }
+       else {
+          // map through cart array
+          //find that particular item by unique field,id
+          //inc the amount by 1
+          //cart:updated array
+          const tempCart = state.cart.map((cartItem) => {
+            if (cartItem.id === newItem.id) {
+              let newAmount = cartItem.amount + amount;
+              return { ...cartItem, amount: newAmount };
+            } else {
+              return cartItem;
+            }
+          });
+        //   console.log(tempCart);
+    
+          return { ...state, cart: tempCart };
+
        }
     }
     else if(action.type==="INC_PROD")
@@ -63,7 +90,8 @@ const reducer=(state,action)=>{
 // const [product,setProduct]=useState(data);
 const initialState={
     cart:[],
-    total:0
+    total:0,
+    amount:0
 }
 
 const CartProvider=({children})=>{

@@ -3,6 +3,7 @@ import { useCartContext } from '../cart_context';
 
 export const Cart = () => {
   const { cart,clear,decProd,incProd,del} =useCartContext();
+  console.log(cart);
   return (
     <>
      <div>
