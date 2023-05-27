@@ -2,7 +2,7 @@
 //context api
 //context api + useReducer
 //redux toolkit
-import React,{createContext,useContext,useReducer} from "react";
+import React,{createContext,useContext,useEffect,useReducer} from "react";
 import data from "./data";
 
 const CartContext=createContext();
@@ -97,6 +97,15 @@ const initialState={
 const CartProvider=({children})=>{
 
     const [state,dispatch]=useReducer(reducer,initialState);
+
+    useEffect(()=>{
+const tot=state.cart.reduce((acc,el)=>{
+    return acc=acc+(el.price*el.amount);
+},0)
+state.total=tot;
+console.log(tot);
+    },[state.cart])
+
 
     const incProd=(id)=>{
         dispatch({type:'INC_PROD',payload:id})

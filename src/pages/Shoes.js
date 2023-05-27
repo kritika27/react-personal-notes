@@ -1,7 +1,7 @@
 import React from 'react'
 import { useGlobalContext } from '../context';
 import { useCartContext } from '../cart_context';
-
+import { NavLink } from 'react-router-dom';
 export const Shoes = () => {
 
   const { amount, product,inc,dec }=useGlobalContext();
@@ -45,7 +45,7 @@ export const Shoes = () => {
                 <button 
                 onClick={()=>add(el.id,el.amount,el,color,size)}>
                   Add To Cart</button>
-                <button>View in Detail</button>
+                <NavLink to={`/shoes/${el.id}`}><button>View in Detail</button></NavLink>
                 </div>
             )
           })

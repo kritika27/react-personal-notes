@@ -21,7 +21,7 @@ const reducer=(state,action)=>{
     if(action.type==="INC")
     {
         const newItem=state.product.map(el=>{
-            if(el.id===action.payload)
+            if(el.id===action.payload && el.amount<el.stock)
              {
                  return {...el,
                  amount:el.amount+1}
@@ -33,7 +33,7 @@ const reducer=(state,action)=>{
     else if(action.type==="DEC")
     {
         const newItem=state.product.map(el=>{
-            if(el.id===action.payload)
+            if(el.id===action.payload && el.amount>1)
              {
                  return {...el,
                  amount:el.amount-1}
